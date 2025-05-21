@@ -21,7 +21,7 @@ ed25519-hd-key
 
 # Clone the repo
 git clone https://github.com/Suhasmashetti/web-wallet.git
-cd web-wallet-generator
+cd web-wallet
 
 # Install dependencies
 npm install
