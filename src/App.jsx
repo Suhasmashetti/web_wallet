@@ -35,7 +35,7 @@ function App() {
   };
 
   return (
-    <div className="bg-[url('https://plus.unsplash.com/premium_photo-1700823214919-534b727a5bc1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGV4dHVyZSUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D')] w-full text-white font-sans">
+    <div className="bg-black min-h-screen w-full text-white font-sans">
       <div className="max-w-3xl mx-auto p-6">
         <h1 className="text-3xl font-bold mb-6 text-center">🔐 Multi-Chain Wallet Generator</h1>
         <div className="flex justify-center">
@@ -55,13 +55,13 @@ function App() {
             </div>
 
             <div className="mt-10">
-              <h2 className="text-xl font-semibold mb-4 text-black"> Ethereum Wallets</h2>
+              <h2 className="text-xl font-semibold mb-4 text-green-400">🟢 Ethereum Wallets</h2>
               {ethWallets.map((w, i) => (
                 <div key={i} className="bg-gray-800 p-4 rounded-lg shadow border border-gray-700 mb-4">
                   <p className="text-sm break-words"><span className="font-semibold">Address:</span> {w.address}</p>
                   <p className="text-sm mt-2 break-words">
                     <span className="font-semibold">Private Key:</span>{" "}
-                    {showEthKeys[i] ? w.privateKey : "**********************"}
+                    {showEthKeys[i] ? w.privateKey : "••••••••••••••••••••••••••••"}
                   </p>
                   <button
                     className="text-xs mt-2 text-blue-400 hover:underline"
@@ -74,16 +74,16 @@ function App() {
             </div>
 
             <div className="mt-10">
-              <h2 className="text-xl font-semibold mb-4 text-black"> Solana Wallets</h2>
+              <h2 className="text-xl font-semibold mb-4 text-yellow-300">🟡 Solana Wallets</h2>
               {solWallets.map((w, i) => (
                 <div key={i} className="bg-gray-800 p-4 rounded-lg shadow border border-gray-700 mb-4">
                   <p className="text-sm break-words"><span className="font-semibold">Address:</span> {w.address}</p>
                   <p className="text-sm mt-2 break-words">
                     <span className="font-semibold">Secret Key:</span>{" "}
-                    {showSolKeys[i] ? w.secretKey : "***********************"}
+                    {showSolKeys[i] ? w.secretKey : "••••••••••••••••••••••••••••"}
                   </p>
                   <button
-                    className="text-xs mt-2 text-white-400 hover:underline"
+                    className="text-xs mt-2 text-blue-400 hover:underline"
                     onClick={() => toggleKey('sol', i)}
                   >
                     {showSolKeys[i] ? "Hide" : "Show"}
